@@ -1,0 +1,80 @@
+@font-face {
+  font-family: 'Montserrat';
+  src: url('fonts/Montserrat-VariableFont_wght.ttf') format('truetype');
+  /* Adicione o formato correto: woff2, woff, ttf, ou otf */
+}
+
+body {
+  font-family: "Montserrat";
+  color: white;
+  background-color: black;
+}
+
+a {
+
+  color: white;
+  margin-left: 80px;
+}
+
+li{
+  list-style: none;
+}
+
+h1{
+  color: white;
+}
+
+.container{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.card{
+  display: flex;
+  color: black;
+  background-color: white;
+}
+
+.logo-container{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.nav-container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.rosto-container{
+  margin-bottom: 100px;
+  margin-left: 500px;
+  margin-right: 500px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.videos {
+  width: 1080px;
+  margin: 0 auto;
+  overflow: hidden;
+}
+
+.videos ul {
+  display: flex;
+  gap: 40px;
+  width: max-content;
+  animation: slide 20s linear infinite;
+}
+
+@keyframes slide {
+  from {
+    transform: translateX(0);
+  }
+  to {
+    transform: translateX(-50%);
+  }
+}
