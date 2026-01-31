@@ -10,12 +10,6 @@ body {
   background-color: black;
 }
 
-a {
-
-  color: white;
-  margin-left: 80px;
-}
-
 li{
   list-style: none;
 }
@@ -30,22 +24,23 @@ h1{
   justify-content: center;
 }
 
-.card{
-  display: flex;
-  color: black;
-  background-color: white;
-}
-
-.logo-container{
+.cont-container{
   display: flex;
   align-items: center;
   justify-content: center;
+  margin-bottom: 40px;
 }
 
 .nav-container {
   display: flex;
+  margin-top: 40px;
   align-items: center;
   justify-content: center;
+}
+
+.nav-container a {
+  color: white;
+  margin-left: 80px;
 }
 
 .rosto-container{
@@ -55,6 +50,39 @@ h1{
   display: flex;
   align-items: center;
   justify-content: center;
+}
+
+.whatsapp{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: green;
+  border-radius: 10px;
+  margin: 20px;
+  padding: 10px;
+}
+
+.instagram{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: deeppink;
+  border-radius: 10px;
+  margin: 20px;
+  padding: 6px;
+}
+
+.card{
+  width: 400px;
+  height: 800px;
+  margin-left: 20px;
+  text-align: center;
+  border-radius: 20px;
+  background-color: white;
+}
+
+.card h1{
+  color: black;
 }
 
 .videos {
