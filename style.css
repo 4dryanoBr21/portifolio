@@ -94,7 +94,7 @@ body {
   display: flex;
   gap: 40px;
   width: max-content;
-  animation: slide 20s linear infinite;
+  animation: slide 60s linear infinite;
 }
 
 .social-btn {
