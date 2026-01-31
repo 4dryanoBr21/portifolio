@@ -68,20 +68,47 @@ body {
   }
 }
 
-.card {
-  width: 90%;
-  max-width: 400px; 
-  min-height: 500px;
-  margin: 1rem auto;
-  text-align: center;
-  border-radius: 20px;
-  background-color: white;
-  color: black;
-  padding: 2rem;
+.card-container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 50px;
+  max-width: 1100px;
+  margin: 60px auto;
+  padding: 0 20px;
 }
 
-.card h1 {
-  color: black;
+.card-container img {
+  height: auto;
+  max-width: 400px;
+  flex-shrink: 0;
+}
+
+.card-texto {
+  flex: 1;
+  text-align: left;
+}
+
+.card-texto p {
+  font-size: 1.1rem;
+  line-height: 1.6;
+  margin-bottom: 20px;
+  color: #e0e0e0;
+}
+
+@media (max-width: 850px) {
+  .card-container {
+    flex-direction: column;
+    text-align: center;
+  }
+  
+  .card-texto {
+    text-align: center;
+  }
+
+  .card-container img {
+    max-width: 300px;
+  }
 }
 
 .videos {
