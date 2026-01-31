@@ -10,7 +10,7 @@ body {
   margin: 0;
 }
 
-.container, .cont-container, .nav-container {
+.container, .cont-container, .nav-container, .logo-container {
   display: flex;
   align-items: center;
   justify-content: center;
