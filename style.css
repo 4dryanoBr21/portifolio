@@ -1,92 +1,93 @@
-@font-face {
-  font-family: 'Montserrat';
-  src: url('fonts/Montserrat-VariableFont_wght.ttf') format('truetype');
-  /* Adicione o formato correto: woff2, woff, ttf, ou otf */
+/* 1. Variáveis para facilitar manutenção */
+:root {
+  --bg-color: black;
+  --text-color: white;
 }
 
 body {
-  font-family: "Montserrat";
-  color: white;
-  background-color: black;
+  font-family: 'Montserrat', sans-serif;
+  color: var(--text-color);
+  background-color: var(--bg-color);
+  margin: 0;
 }
 
-li{
-  list-style: none;
-}
-
-h1{
-  color: white;
-}
-
-.container{
+.container, .cont-container, .nav-container {
   display: flex;
   align-items: center;
   justify-content: center;
-}
-
-.cont-container{
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  margin-bottom: 40px;
-}
-
-.nav-container {
-  display: flex;
-  margin-top: 40px;
-  align-items: center;
-  justify-content: center;
+  flex-wrap: wrap;
+  gap: 2rem; 
+  padding: 1rem;
 }
 
 .nav-container a {
   color: white;
-  margin-left: 80px;
+  text-decoration: none;
 }
 
-.rosto-container{
-  margin-bottom: 100px;
-  margin-left: 500px;
-  margin-right: 500px;
+.rosto-container {
   display: flex;
-  align-items: center;
+  align-items: center;      /* Alinha o texto verticalmente ao centro da foto */
   justify-content: center;
+  gap: 50px;                /* Espaço entre a foto e o bloco de texto */
+  max-width: 1100px;        /* Largura máxima do conjunto */
+  margin: 60px auto;        /* Centraliza na tela */
+  padding: 0 20px;
 }
 
-.whatsapp{
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  background-color: green;
-  border-radius: 10px;
-  margin: 20px;
-  padding: 10px;
+.rosto-container img {
+  height: auto;             /* Mantém a proporção */
+  max-width: 400px;         /* Limita a largura da foto */
+  border-radius: 20px;      /* Um leve arredondado combina com o DaVinci/Blender */
+  flex-shrink: 0;           /* Não deixa a foto diminuir */
 }
 
-.instagram{
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  background-color: deeppink;
-  border-radius: 10px;
-  margin: 20px;
-  padding: 6px;
+.rosto-texto {
+  flex: 1;                  /* Ocupa o restante do espaço lateral */
+  text-align: left;
 }
 
-.card{
-  width: 400px;
-  height: 800px;
-  margin-left: 20px;
+.rosto-texto p {
+  font-size: 1.1rem;        /* Tamanho de leitura confortável */
+  line-height: 1.6;         /* Espaçamento entre linhas profissional */
+  margin-bottom: 20px;      /* Substitui o <br> com mais controle */
+  color: #e0e0e0;           /* Um branco levemente acinzentado (menos cansativo) */
+}
+
+/* Responsividade: Se a tela for pequena, a foto vai para cima e o texto para baixo */
+@media (max-width: 850px) {
+  .rosto-container {
+    flex-direction: column;
+    text-align: center;
+  }
+  
+  .rosto-texto {
+    text-align: center;
+  }
+
+  .rosto-container img {
+    max-width: 300px;       /* Diminui um pouco a foto no celular */
+  }
+}
+
+.card {
+  width: 90%;
+  max-width: 400px; 
+  min-height: 500px;
+  margin: 1rem auto;
   text-align: center;
   border-radius: 20px;
   background-color: white;
+  color: black;
+  padding: 2rem;
 }
 
-.card h1{
+.card h1 {
   color: black;
 }
 
 .videos {
-  width: 1080px;
+  width: 90%;
   margin: 0 auto;
   overflow: hidden;
 }
@@ -96,6 +97,36 @@ h1{
   gap: 40px;
   width: max-content;
   animation: slide 20s linear infinite;
+}
+
+/* Criando uma classe base para evitar repetição de código (DRY - Don't Repeat Yourself) */
+.social-btn {
+  display: inline-flex; /* Ajusta ao tamanho do conteúdo + padding */
+  align-items: center;
+  justify-content: center;
+  border-radius: 10px;
+  margin: 1rem;         /* Usando rem para espaçamento */
+  padding: 12px 24px;   /* Padding padronizado para ambos */
+  color: white;         /* Garante que o texto/ícone seja branco */
+  text-decoration: none;
+  font-weight: bold;
+  transition: transform 0.2s, filter 0.2s; /* Suaviza o efeito de passar o mouse */
+  cursor: pointer;
+}
+
+/* Efeito ao passar o mouse */
+.social-btn:hover {
+  transform: scale(1.05); /* Aumenta levemente */
+  filter: brightness(1.1); /* Dá um brilho extra */
+}
+
+/* Cores específicas */
+.whatsapp {
+  background-color: #25D366; /* Verde oficial do WhatsApp */
+}
+
+.instagram {
+  background-color: #E1306C; /* Rosa oficial do Instagram */
 }
 
 @keyframes slide {
