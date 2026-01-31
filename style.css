@@ -112,16 +112,28 @@ body {
 }
 
 .videos {
-  width: 90%;
-  margin: 0 auto;
+  width: 100%;
   overflow: hidden;
+  padding: 40px 0;
 }
 
 .videos ul {
   display: flex;
   gap: 40px;
+  list-style: none;
+  padding: 0;
+  margin: 0;
   width: max-content;
   animation: slide 60s linear infinite;
+}
+
+.videos li {
+  flex-shrink: 0;
+}
+
+.videos iframe {
+  border-radius: 20px;
+  max-width: 90vw;
 }
 
 .social-btn {
